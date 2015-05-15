@@ -1,0 +1,460 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+body {
+  overflow-x: hidden; }
+
+.wrap2 {
+  background: #f9662b; }
+
+.content {
+  width: 975px;
+  margin: 0px auto;
+  position: relative; }
+
+.content-bg {
+  width: 2000px;
+  position: relative;
+  height: 428px;
+  margin-left: -515px;
+  overflow: hidden;
+  z-index: 1;
+  background: url(../images/liuyi20150514bg_02.jpg) no-repeat; }
+
+.center-div {
+  width: 975px;
+  height: 100%;
+  margin: 0px auto;
+  position: relative;
+  z-index: 2; }
+
+.cover-bg {
+  width: 2000px;
+  position: absolute;
+  left: -515px;
+  top: -7px;
+  z-index: 3;
+  height: 435px;
+  background: url(../images/liuyi20150514cover_02.png) no-repeat; }
+
+.too-many-people {
+  width: 466px;
+  height: 403px;
+  position: absolute;
+  left: -115px;
+  top: 0px;
+  z-index: 3;
+  background: url(../images/liuyi20150514toomanypeople_03.png) no-repeat;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 0.5s; }
+
+.biao-title {
+  width: 728px;
+  height: 256px;
+  background: url(../images/liuyi20150514title_03.png) no-repeat;
+  position: absolute;
+  left: 214px;
+  top: 10px;
+  z-index: 3;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 1.5s; }
+
+.yundong {
+  width: 566px;
+  height: 123px;
+  background: url(../images/liuyi20150514r_05.png) no-repeat;
+  position: absolute;
+  left: 298px;
+  top: 246px;
+  z-index: 3;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-duration: 1s;
+  -moz-animation-delay: 1s; }
+
+.star1 {
+  width: 29px;
+  height: 29px;
+  display: block;
+  background-image: url(../images/liuyi20150514_04.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite; }
+
+.star2 {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url(../images/liuyi20150514_04.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 5s;
+  -moz-animation-iteration-count: infinite; }
+
+.star3 {
+  width: 10px;
+  height: 10px;
+  display: block;
+  background-image: url(../images/liuyi20150514_04.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-duration: 3s;
+  -moz-animation-iteration-count: infinite; }
+
+.huodong-area {
+  width: 2000px;
+  height: 977px;
+  background: #7f261e;
+  margin-left: -515px;
+  position: relative; }
+
+.huodong-bg {
+  width: 100%;
+  height: 977px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1; }
+
+/* 
+	云朵动画
+ */
+@-webkit-keyframes left_right {
+  0% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); } }
+@keyframes left_right {
+  0% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); } }
+@-webkit-keyframes left_right2 {
+  0% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); } }
+@keyframes left_right2 {
+  0% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); }
+  50% {
+    -webkit-transform: translate3d(-100px, 0, 0);
+    transform: translate3d(-100px, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0); } }
+@-webkit-keyframes top_bottom {
+  0% {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0px, -30px, 0); }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0px, -30px, 0); } }
+@keyframes top_bottom {
+  0% {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0px, -30px, 0); }
+  50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, -30px, 0);
+    transform: translate3d(0px, -30px, 0); } }
+@-webkit-keyframes rotate_fengche {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg); } }
+@keyframes rotate_fengche {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg); } }
+.left_right {
+  -webkit-animation-name: left_right;
+  -moz-animation-name: left_right;
+  animation-name: left_right;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-duration: 30s;
+  -moz-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.left_right2 {
+  -webkit-animation-name: left_right2;
+  -moz-animation-name: left_right2;
+  animation-name: left_right2;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-duration: 30s;
+  -moz-animation-duration: 30s;
+  animation-duration: 30s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.top_bottom {
+  -webkit-animation-name: top_bottom;
+  -moz-animation-name: top_bottom;
+  animation-name: top_bottom;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.rotate_fengche {
+  -webkit-animation-name: rotate_fengche;
+  -moz-animation-name: rotate_fengche;
+  animation-name: rotate_fengche;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  transform-origin: center center; }
+
+.yunduo01 {
+  width: 146px;
+  height: 98px;
+  background: url(../images/liuyi20150514are_07.jpg) no-repeat;
+  position: absolute;
+  left: 197px;
+  top: 92px; }
+
+.yunduo02 {
+  width: 87px;
+  height: 50px;
+  background: url(../images/liuyi20150514are_22.jpg) no-repeat;
+  position: absolute;
+  left: 366px;
+  top: 443px; }
+
+.yunduo03 {
+  width: 164px;
+  height: 103px;
+  background: url(../images/liuyi20150514are_10.jpg) no-repeat;
+  position: absolute;
+  left: 1585px;
+  top: 137px; }
+
+.yunduo04 {
+  width: 82px;
+  height: 60px;
+  background: url(../images/liuyi20150514are_27.jpg) no-repeat;
+  position: absolute;
+  left: 1533px;
+  top: 549px; }
+
+.yanzi01 {
+  width: 75px;
+  height: 65px;
+  background: url(../images/liuyi20150514are_14.jpg) no-repeat;
+  position: absolute;
+  left: 356px;
+  top: 240px; }
+
+.yanzi02 {
+  width: 89px;
+  height: 61px;
+  background: url(../images/liuyi20150514are_03.jpg) no-repeat;
+  position: absolute;
+  left: 1480px;
+  top: 0px; }
+
+.yanzi03 {
+  width: 62px;
+  height: 31px;
+  background: url(../images/liuyi20150514are_19.jpg) no-repeat;
+  position: absolute;
+  left: 1423px;
+  top: 440px; }
+
+.appale-watch {
+  width: 137px;
+  height: 124px;
+  background: url(../images/liuyi20150514watch_03.png) no-repeat;
+  position: absolute;
+  left: 90px;
+  top: -50px;
+  z-index: 1;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.bottom-bg {
+  width: 100%;
+  height: 327px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px; }
+
+.fengche {
+  width: 86px;
+  height: 86px;
+  position: absolute;
+  left: 686px;
+  top: 863px;
+  background: url(../images/liuyi20150514_fengche_40.png) no-repeat;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  z-index: 3; }
+
+.xiangqing-area {
+  width: 975px;
+  height: 798px;
+  position: absolute;
+  left: 428px;
+  top: 0px;
+  z-index: 10; }
+
+.mazi {
+  width: 345px;
+  height: 798px;
+  float: left;
+  margin-left: 82px;
+  position: relative;
+  z-index: 2; }
+
+.text-box {
+  width: 594px;
+  float: right;
+  margin-right: -100px; }
+
+.text-disc {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 27px;
+  background: #f9662b;
+  border-radius: 10px; }
+  .text-disc p {
+    font-size: 16px;
+    color: #64160f;
+    line-height: 1.6em; }
+    .text-disc p span {
+      color: #f2ff28; }
+
+.fengche_shu {
+  width: 4px;
+  height: 27px;
+  background: #d18b6b;
+  position: absolute;
+  left: 728px;
+  top: 923px;
+  z-index: 2; }
